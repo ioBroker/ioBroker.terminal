@@ -2,6 +2,8 @@
 
 # ioBroker.terminal
 
+Based on [web-terminal](https://github.com/rabchev/web-terminal) from rabchev.
+
 terminal server to open command line interface.
 Please use it only for administration purposes.
 
