@@ -27,7 +27,8 @@
         "port":                     8088,
         "auth":                     false,
         "secure":                   false,
-        "bind":                     "0.0.0.0"
+        "bind":                     "0.0.0.0",
+        "defaultUser":              "admin"
     },
     "objects": [
         {

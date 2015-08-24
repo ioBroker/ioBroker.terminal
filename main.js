@@ -7,6 +7,7 @@ var fs =       require('fs');
 var Stream =   require('stream');
 var utils =    require(__dirname + '/lib/utils'); // Get common adapter utils
 var terminal = require(__dirname + '/lib/web-terminal');
+var path =     require('path');
 
 var session;// =           require('express-session');
 var cookieParser;// =      require('cookie-parser');
@@ -288,7 +289,7 @@ function initWebServer(settings) {
             adapter.log.info('http' + (settings.secure ? 's' : '') + ' server listening on port ' + port);
         });
 
-        server.app.use(function (req, res, next) {
+        /*server.app.use(function (req, res, next) {
             res.header('Access-Control-Allow-Origin', '*');
             res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
             res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, *');
@@ -299,9 +300,12 @@ function initWebServer(settings) {
             } else {
                 next();
             }
-        });
+        });*/
+        var config = {
+            cwd: path.normalize(__dirname + '/../..')
+        };
 
-        terminal(server.server);
+        terminal(server.server, config);
     }
 
     if (server.server) {
