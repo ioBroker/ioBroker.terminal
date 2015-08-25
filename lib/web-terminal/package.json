@@ -1,0 +1,100 @@
+{
+  "name": "web-terminal",
+  "description": "Web-Terminal is a terminal server that provides remote CLI via standard web browser and HTTP protocol.",
+  "version": "0.7.0",
+  "author": {
+    "name": "Boyan Rabchev",
+    "email": "boyan@rabchev.com"
+  },
+  "contributors": [
+    {
+      "name": "Boyan Rabchev",
+      "email": "boyan@rabchev.com"
+    }
+  ],
+  "config": {
+    "port": "8088",
+    "root": "/terminal",
+    "requireSSL": "false",
+    "key": "",
+    "cert": "",
+    "pfx": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rabchev/web-terminal.git"
+  },
+  "main": "index",
+  "preferGlobal": "false",
+  "dependencies": {
+    "send": "*",
+    "connect": "*",
+    "socket.io": "*",
+    "commander": "*",
+    "lodash": "*",
+    "authenticate-pam": "*",
+    "uid-number": "*"
+  },
+  "devDependencies": {
+    "nodeunit": "*"
+  },
+  "optionalDependencies": {
+    "authenticate-pam": "*",
+    "uid-number": "*"
+  },
+  "keywords": [
+    "command",
+    "shell",
+    "command-line",
+    "text",
+    "terminal",
+    "browser",
+    "web",
+    "node",
+    "TTY",
+    "JavaScript",
+    "REPL"
+  ],
+  "bin": {
+    "web-terminal": "./bin/run.js"
+  },
+  "scripts": {
+    "start": "node ./bin/run.js",
+    "test": "node test"
+  },
+  "bugs": {
+    "url": "https://github.com/rabchev/web-terminal/issues",
+    "email": "boyan@rabchev.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://github.com/rabchev/web-terminal/blob/master/LICENSE"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "gitHead": "82eb0e5c0d5131c2e0214fe22ca185a584e82d3a",
+  "homepage": "https://github.com/rabchev/web-terminal",
+  "_id": "web-terminal@0.7.0",
+  "_shasum": "a976633da64b542cdfc39ad1e1700563a67d6cc8",
+  "_from": "web-terminal@",
+  "_npmVersion": "2.3.0",
+  "_nodeVersion": "0.10.25",
+  "_npmUser": {
+    "name": "rabchev",
+    "email": "boyan@rabchev.com"
+  },
+  "maintainers": [
+    {
+      "name": "rabchev",
+      "email": "boyan@rabchev.com"
+    }
+  ],
+  "dist": {
+    "shasum": "a976633da64b542cdfc39ad1e1700563a67d6cc8",
+    "tarball": "http://registry.npmjs.org/web-terminal/-/web-terminal-0.7.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/web-terminal/-/web-terminal-0.7.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

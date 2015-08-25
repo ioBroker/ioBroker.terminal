@@ -1,0 +1,201 @@
+<html>
+
+<link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css"/>
+<script type="text/javascript" src="../../lib/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
+<script type="text/javascript" src="../../js/translate.js"></script>
+<script type="text/javascript" src="../../js/adapter-settings.js"></script>
+
+<style>
+    .text-dos {
+        background-color: #000;
+        color: #FFFFFF;
+        cursor: text;
+        font-family: Lucida Console,CommPlus, MS LineDraw, Telix TT Terminal,monospace;
+        font-size: 16px;
+    }
+    .text-osx {
+        background-color: #FFF;
+        color: #000;
+        cursor: text;
+        font-family: 'Andale Mono', monospace;
+        font-size: 14px;
+    }
+    .text-linux {
+        background-color: #000;
+        color: #00c300;
+        cursor: text;
+        font-family: Lucida Console,CommPlus, MS LineDraw, Telix TT Terminal,monospace;
+        font-size: 14px;
+    }
+    .text {
+        background-color: #290029;
+        color: #FFFFFF;
+        cursor: text;
+        font-family: Lucida Console,CommPlus, MS LineDraw, Telix TT Terminal,monospace;
+        font-size: 16px;
+    }
+</style>
+
+<script type="text/javascript">
+    systemDictionary = {
+        "Terminal Server adapter settings": {
+            "de": "Terminal Server adapter settings",
+            "ru": "Terminal Server adapter settings"
+        },
+        "Run as:":          {"de": "Laufen unter Anwender:", "ru": "Запустить от пользователя:"},
+        "IP:":              {"de": "IP:",                     "ru": "IP:"},
+        "Port:":            {"de": "Port:",                   "ru": "Порт:"},
+        "Secure(HTTPS):":   {"de": "Verschlüsselung(HTTPS):", "ru": "Шифрование(HTTPS):"},
+        "Authentication:":  {"de": "Authentifikation:",       "ru": "Аутентификация:"},
+        "Cache:":           {"de": "Puffer:",                 "ru": "Кэш:"},
+        "none":             {"de": "keins",                   "ru": ""},
+        "integrated":       {"de": "integriert",              "ru": "встроенный"},
+        "Public certificate:":    {"en": "Public certificate:",     "de": "Publikzertifikat:",       "ru": "'Public' сертификат:"},
+        "Private certificate:":   {"en": "Private certificate:",    "de": "Privatzertifikat:",       "ru": "'Private' сертификат:"},
+        "Internal 'Simple API':":   {"en": "Build-in 'Simple-API'",    "de": "Eingebautes 'Simple-API':",       "ru": "Встроенный 'Simple-API':"},
+
+        "help_tip":         {
+            "en": "On save the adapter restarts with new configuration immediately",
+            "de": "Beim Speichern von Einstellungen der Adapter wird sofort neu gestartet.",
+            "ru": "Сразу после сохранения настроек драйвер перезапуститься с новыми значениями"
+        },
+        "Set certificates or load it first in the system settings (right top).":    {
+            "en": "Set certificates or load it first in the system settings (right top).",
+            "de": "Setze Zertificate oder lade die erst unter System/Einstellungen (oben rechts).",
+            "ru": "Нужно выбрать сертификаты или сначала загрузить их в системных настройках (вверху справа)."
+        },
+        "socket_help":         {
+            "en": "Used by adapters like rickshaw or vis",
+            "de": "Wird von Rickshaw oder Vis benutzt",
+            "ru": "Используется для Rickshaw или Vis"
+        }
+    };
+
+    var supportedSockets = ['socketio'];
+
+    function showHideSettings() {
+        if ($('#secure').prop('checked')) {
+            $('#_certPublic').show();
+            $('#_certPrivate').show();
+        } else {
+            $('#_certPublic').hide();
+            $('#_certPrivate').hide();
+            $('#auth').prop('checked', false);
+        }
+        if ($('#auth').prop('checked')) {
+            $('#secure').prop('checked', true);
+            $('#defaultUser').val('admin');
+            $('.defaultUser').hide();
+        } else {
+            $('.defaultUser').show();
+        }
+    }
+
+    // the function loadSettings has to exist ...
+    function load(settings, onChange) {
+        if (!settings) return;
+
+        getIPs(function(ips) {
+            for (var i = 0; i < ips.length; i++) {
+                $('#bind').append('<option value="' + ips[i].address + '">' + ips[i].name + '</option>');
+            }
+            $('#bind.value').val(settings.bind);
+        });
+
+        $('.value').each(function () {
+            var key = $(this).attr('id');
+            // example: select elements with id=key and class=value and insert value
+            if ($('#' + key + '.value').attr('type') == 'checkbox') {
+                $('#' + key + '.value').prop('checked', settings[key]).change(function() {
+                    showHideSettings();
+                    onChange();
+                });
+            } else {
+                $('#' + key + '.value').val(settings[key]).change(function() {
+                    onChange();
+                }).keyup(function() {
+                    $(this).trigger('change');
+                });
+            }
+        });
+        onChange(false);
+
+        fillSelectCertificates('#certPublic',  'public',  settings.certPublic);
+        fillSelectCertificates('#certPrivate', 'private', settings.certPrivate);
+        fillUsers('#defaultUser', settings.defaultUser);
+
+        showHideSettings();
+
+        $('#auth').change(function () {
+            if ($(this).prop('checked')) {
+                $('#secure').prop('checked', true);
+                showHideSettings();
+            }
+        });
+        $('#style').change(function () {
+            $('.sample').removeClass('text-dos text text-linux text-osx');
+            $('.sample').addClass('text' + $(this).val());
+        });
+        $('.sample').addClass('text' + $('#style').val());
+    }
+
+    // ... and the function save has to exist.
+    // you have to make sure the callback is called with the settings object as first param!
+    function save(callback) {
+        // example: select elements with class=value and build settings object
+        var obj = {};
+        $('.value').each(function () {
+            var $this = $(this);
+            if ($this.attr('type') == 'checkbox') {
+                obj[$this.attr('id')] = $this.prop('checked');
+            } else {
+                obj[$this.attr('id')] = $this.val();
+            }
+        });
+
+        if ($('#secure').prop('checked') && (!$('#certPrivate').val() || !$('#certPublic').val())) {
+            showMessage(_('Set certificates or load it first in the system settings (right top).'));
+            return;
+        }
+
+        callback(obj);
+    }
+</script>
+
+<!-- you have to put your config page in a div with id adapter-container -->
+<div id="adapter-container">
+
+    <table><tr><td><img src="terminal.png"></td><td><h3 class="translate">Terminal Server adapter settings</h3></td></tr></table>
+
+    <table>
+        <tr><td class="translate">IP:</td><td>            <select class="value" id="bind"></select></td><td></td></tr>
+        <tr><td class="translate">Port:</td><td>          <input  class="value" id="port" size="5"  maxlength="5"/></td><td></td></tr>
+        <tr><td class="translate">Secure(HTTPS):</td><td> <input  class="value" id="secure" type="checkbox" /></td><td></td></tr>
+        <tr id="_certPublic">
+            <td class="translate">Public certificate:</td>
+            <td><select id="certPublic" class="value"></select></td>
+        </tr>
+        <tr id="_certPrivate">
+            <td class="translate">Private certificate:</td>
+            <td><select id="certPrivate" class="value"></select></td>
+        </tr>
+        <tr><td class="translate">Authentication:</td><td><input  class="value" id="auth"   type="checkbox" /></td><td></td></tr>
+        <tr class="defaultUser"><td class="translate">Run as:</td><td><select class="value" id="defaultUser" /></td></tr>
+        <tr><td class="translate">Console style</td><td>
+            <select id="style" class="value">
+                <option value=""       class="translate">Default</option>
+                <option value="-osx"   >OSX</option>
+                <option value="-linux" >Linux</option>
+                <option value="-dos"   >DOS</option>
+            </select>
+        </td><td class="translate sample">Sample of the text$</td></tr>
+    </table>
+
+    <p class="translate">help_tip</p>
+
+</div>
+</html>
