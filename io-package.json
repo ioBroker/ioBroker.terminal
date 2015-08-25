@@ -1,7 +1,7 @@
 {
     "common": {
         "name":                     "terminal",
-        "version":                  "0.1.0",
+        "version":                  "0.1.1",
         "title":                    "ioBroker simple terminal Adapter",
         "desc": {
             "en":                   "opens a terminal server for the ioBroker",
@@ -28,7 +28,8 @@
         "auth":                     false,
         "secure":                   false,
         "bind":                     "0.0.0.0",
-        "defaultUser":              "admin"
+        "defaultUser":              "admin",
+		"style":                    ""
     },
     "objects": [
         {

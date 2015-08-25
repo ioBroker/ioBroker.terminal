@@ -11,6 +11,9 @@ Please use it only for administration purposes.
 
 ## Changelog
 
+#### 0.1.1
+* (bluefox) add command ll
+
 #### 0.1.0
 * (bluefox) add css style selector
 
