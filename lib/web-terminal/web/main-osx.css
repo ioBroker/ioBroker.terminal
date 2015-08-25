@@ -1,0 +1,22 @@
+body {
+    background-color: #FFF;
+    color: #000;
+    cursor: text;
+    font-family: Lucida Console,CommPlus, MS LineDraw, Telix TT Terminal,monospace;
+    font-size: 16px;
+    height: 100%;
+}
+
+.inverse {
+    background-color: #000;
+    color: #fff;
+}
+
+#hidden-input {
+    opacity: 0;
+    width: 0px;
+    color: transparent;
+    outline: none;
+    left: -100px;
+    position: relative;
+}
