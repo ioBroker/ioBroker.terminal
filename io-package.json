@@ -1,36 +1,47 @@
 {
     "common": {
-        "name":                     "terminal",
-        "version":                  "0.1.2",
-        "title":                    "ioBroker simple terminal Adapter",
+        "name": "terminal",
+        "version": "0.1.2",
+        "title": "ioBroker simple terminal Adapter",
         "desc": {
-            "en":                   "opens a terminal server for the ioBroker",
-            "de":                   "Stellt terminal server für 'ioBroker' zur Verfügung",
-            "ru":                   "Запускает терминал для 'ioBroker'"
+            "en": "opens a terminal server for the ioBroker",
+            "de": "Stellt terminal server für 'ioBroker' zur Verfügung",
+            "ru": "Запускает терминал для 'ioBroker'"
         },
-        "mode":                     "daemon",
-        "platform":                 "Javascript/Node.js",
-        "loglevel":                 "info",
-        "icon":                     "terminal.png",
-        "readme":                   "https://github.com/ioBroker/ioBroker.terminal/blob/master/README.md",
-        "enabled":                  true,
-        "keywords":                 ["terminal", "server", "www", "express"],
-        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
-        "type":                     "service",
-        "stopBeforeUpdate":         true,
-        "localLink":                "%protocol%://%ip%:%port%",
+        "mode": "daemon",
+        "platform": "Javascript/Node.js",
+        "loglevel": "info",
+        "icon": "terminal.png",
+        "readme": "https://github.com/ioBroker/ioBroker.terminal/blob/master/README.md",
+        "enabled": true,
+        "keywords": [
+            "terminal",
+            "server",
+            "www",
+            "express"
+        ],
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
+        "type": "utility",
+        "stopBeforeUpdate": true,
+        "localLink": "%protocol%://%ip%:%port%",
         "adminTab": {
-            "link":                 "%protocol%://%ip%:%port%",
-			"fa-icon":              "fa-terminal"
-        }
+            "link": "%protocol%://%ip%:%port%",
+            "fa-icon": "fa-terminal"
+        },
+        "authors": [
+            {
+                "name": "bluefox",
+                "email": "bluefox@ccu.io"
+            }
+        ]
     },
     "native": {
-        "port":                     8088,
-        "auth":                     false,
-        "secure":                   false,
-        "bind":                     "0.0.0.0",
-        "defaultUser":              "admin",
-		"style":                    ""
+        "port": 8088,
+        "auth": false,
+        "secure": false,
+        "bind": "0.0.0.0",
+        "defaultUser": "admin",
+        "style": ""
     },
     "objects": [
         {
@@ -39,12 +50,10 @@
             "common": {
                 "name": "Info about connected socket clients",
                 "type": "string",
-                "read":  true,
+                "read": true,
                 "write": false
             }
         }
     ],
-    "instanceObjects": [
-
-    ]
+    "instanceObjects": []
 }
