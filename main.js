@@ -27,7 +27,7 @@ var cache =      {}; // cached web files
 var ownSocket =  false;
 var lang =       'en';
 
-var adapter = utils.adapter({
+var adapter = utils.Adapter({
     name: 'terminal',
     install: function (callback) {
         if (typeof callback === 'function') callback();
