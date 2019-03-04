@@ -9,6 +9,7 @@
             "ru": "Запускает терминал для 'ioBroker'"
         },
         "mode": "daemon",
+        "license": "MIT",
         "platform": "Javascript/Node.js",
         "loglevel": "info",
         "icon": "terminal.png",
