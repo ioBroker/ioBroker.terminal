@@ -1,7 +1,7 @@
 ![Logo](admin/terminal.png)
 
 # ioBroker.terminal
-
+![Number of Installations](http://iobroker.live/badges/terminal-installed.svg) ![Number of Installations](http://iobroker.live/badges/terminal-stable.svg) 
 Based on [web-terminal](https://github.com/rabchev/web-terminal) from rabchev.
 
 terminal server to open command line interface.
