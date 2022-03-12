@@ -1,10 +1,20 @@
 ![Logo](admin/terminal.png)
 
 # ioBroker.terminal
-![Number of Installations](http://iobroker.live/badges/terminal-installed.svg) ![Number of Installations](http://iobroker.live/badges/terminal-stable.svg) 
+
+![Number of Installations](http://iobroker.live/badges/terminal-installed.svg)
+![Number of Installations](http://iobroker.live/badges/terminal-stable.svg)
+[![NPM version](http://img.shields.io/npm/v/iobroker.terminal.svg)](https://www.npmjs.com/package/iobroker.terminal)
+
+![Test and Release](https://github.com/ioBroker/ioBroker.terminal/workflows/Test%20and%20Release/badge.svg)
+[![Translation status](https://weblate.iobroker.net/widgets/adapters/-/terminal/svg-badge.svg)](https://weblate.iobroker.net/engage/adapters/?utm_source=widget)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.terminal.svg)](https://www.npmjs.com/package/iobroker.terminal)
+
+**This adapter uses Sentry libraries to automatically report exceptions and code errors to the developers.** For more details and for information how to disable the error reporting see [Sentry-Plugin Documentation](https://github.com/ioBroker/plugin-sentry#plugin-sentry)! Sentry reporting is used starting with js-controller 3.0.
+
 Based on [web-terminal](https://github.com/rabchev/web-terminal) from rabchev.
 
-terminal server to open command line interface.
+Terminal server to open command line interface.
 Please use it only for administration purposes.
 
 ![Screenshot](img/screen1.png)

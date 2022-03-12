@@ -55,8 +55,8 @@
     "gulp": "^4.0.2"
   },
   "optionalDependencies": {
-    "authenticate-pam": "*",
-    "uid-number": "*"
+    "authenticate-pam": "^1.0.5",
+    "uid-number": "^0.0.6"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.terminal/issues"
