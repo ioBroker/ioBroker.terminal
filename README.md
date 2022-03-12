@@ -22,6 +22,8 @@ Please use it only for administration purposes.
 ## Changelog
 
 ### __WORK IN PROGRESS__
+* (Apollon77) add info-connection state
+* (Apollon77) General update and optimizations
 
 ### 0.1.2
 * (bluefox) show connection state

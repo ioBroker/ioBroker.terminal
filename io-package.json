@@ -77,16 +77,28 @@
         "style": ""
     },
     "objects": [
+    ],
+    "instanceObjects": [
         {
-            "_id": "connected",
-            "type": "info",
+            "_id": "info",
+            "type": "channel",
             "common": {
-                "name": "Info about connected socket clients",
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Number or connected clients",
                 "type": "string",
                 "read": true,
-                "write": false
-            }
+                "write": false,
+                "def": ""
+            },
+            "native": {}
         }
-    ],
-    "instanceObjects": []
+    ]
 }
