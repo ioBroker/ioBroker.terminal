@@ -93,10 +93,10 @@
             "common": {
                 "role": "indicator.connected",
                 "name": "Number or connected clients",
-                "type": "string",
+                "type": "boolean",
                 "read": true,
                 "write": false,
-                "def": ""
+                "def": false
             },
             "native": {}
         }
