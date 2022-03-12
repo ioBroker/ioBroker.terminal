@@ -20,8 +20,7 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 0.2.0 (2022-03-12)
 * (Apollon77) add info-connection state
 * (Apollon77) General update and optimizations
 

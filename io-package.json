@@ -1,115 +1,126 @@
 {
-    "common": {
-        "name": "terminal",
-        "version": "0.1.2",
-        "title": "ioBroker simple terminal",
-        "titleLang": {
-            "en": "ioBroker simple terminal",
-            "de": "ioBroker einfaches Terminal",
-            "ru": "простой терминал ioBroker",
-            "pt": "terminal simples ioBroker",
-            "nl": "ioBroker eenvoudige terminal",
-            "fr": "Terminal simple ioBroker",
-            "it": "terminale semplice ioBroker",
-            "es": "Terminal simple de ioBroker",
-            "pl": "Prosty terminal ioBroker",
-            "zh-cn": "ioBroker 简单终端"
-        },
-        "desc": {
-            "en": "opens a terminal server for the ioBroker",
-            "de": "öffnet einen Terminalserver für den ioBroker",
-            "ru": "открывает терминальный сервер для ioBroker",
-            "pt": "abre um servidor de terminal para o ioBroker",
-            "nl": "opent een terminalserver voor de ioBroker",
-            "fr": "ouvre un serveur de terminaux pour l'ioBroker",
-            "it": "apre un server terminal per ioBroker",
-            "es": "abre un servidor de terminal para el ioBroker",
-            "pl": "otwiera serwer terminali dla ioBroker",
-            "zh-cn": "为 ioBroker 打开终端服务器"
-        },
-        "mode": "daemon",
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "loglevel": "info",
-        "icon": "terminal.png",
-        "readme": "https://github.com/ioBroker/ioBroker.terminal/blob/master/README.md",
-        "enabled": true,
-        "keywords": [
-            "terminal",
-            "server",
-            "www",
-            "express"
-        ],
-        "news": {
-            "0.1.2": {
-                "en": "show connection state",
-                "de": "Verbindungsstatus anzeigen",
-                "ru": "показать состояние подключения",
-                "pt": "mostrar estado de conexão",
-                "nl": "verbindingsstatus weergeven",
-                "fr": "afficher l'état de la connexion",
-                "it": "mostra lo stato della connessione",
-                "es": "mostrar el estado de conexión",
-                "pl": "pokaż stan połączenia",
-                "zh-cn": "显示连接状态"
-            }
-        },
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
-        "type": "utility",
-        "stopBeforeUpdate": true,
-        "localLink": "%protocol%://%ip%:%port%",
-        "adminTab": {
-            "link": "%protocol%://%ip%:%port%",
-            "fa-icon": "subtitles"
-        },
-        "authors": [
-            {
-                "name": "bluefox",
-                "email": "bluefox@ccu.io"
-            }
-        ],
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ],
-        "plugins": {
-            "sentry": {
-                "dsn": "https://fcf06beb38e74b1892ea866f4a1e1d5d@sentry.iobroker.net/180"
-            }
-        }
+  "common": {
+    "name": "terminal",
+    "version": "0.2.0",
+    "title": "ioBroker simple terminal",
+    "titleLang": {
+      "en": "ioBroker simple terminal",
+      "de": "ioBroker einfaches Terminal",
+      "ru": "простой терминал ioBroker",
+      "pt": "terminal simples ioBroker",
+      "nl": "ioBroker eenvoudige terminal",
+      "fr": "Terminal simple ioBroker",
+      "it": "terminale semplice ioBroker",
+      "es": "Terminal simple de ioBroker",
+      "pl": "Prosty terminal ioBroker",
+      "zh-cn": "ioBroker 简单终端"
     },
-    "native": {
-        "port": 8088,
-        "auth": false,
-        "secure": false,
-        "bind": "0.0.0.0",
-        "defaultUser": "admin",
-        "style": ""
+    "desc": {
+      "en": "opens a terminal server for the ioBroker",
+      "de": "öffnet einen Terminalserver für den ioBroker",
+      "ru": "открывает терминальный сервер для ioBroker",
+      "pt": "abre um servidor de terminal para o ioBroker",
+      "nl": "opent een terminalserver voor de ioBroker",
+      "fr": "ouvre un serveur de terminaux pour l'ioBroker",
+      "it": "apre un server terminal per ioBroker",
+      "es": "abre un servidor de terminal para el ioBroker",
+      "pl": "otwiera serwer terminali dla ioBroker",
+      "zh-cn": "为 ioBroker 打开终端服务器"
     },
-    "objects": [
+    "mode": "daemon",
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "loglevel": "info",
+    "icon": "terminal.png",
+    "readme": "https://github.com/ioBroker/ioBroker.terminal/blob/master/README.md",
+    "enabled": true,
+    "keywords": [
+      "terminal",
+      "server",
+      "www",
+      "express"
     ],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Number or connected clients",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
-    ]
+    "news": {
+      "0.2.0": {
+        "en": "add info-connection state\nGeneral update and optimizations",
+        "de": "Info-Verbindungsstatus hinzufügen\nAllgemeines Update und Optimierungen",
+        "ru": "добавить информацию о состоянии соединения\nОбщее обновление и оптимизация",
+        "pt": "adicionar estado de conexão de informações\nAtualização geral e otimizações",
+        "nl": "info-verbindingsstatus toevoegen\nAlgemene update en optimalisaties",
+        "fr": "ajouter l'état de connexion d'informations\nMise à jour générale et optimisations",
+        "it": "aggiungi lo stato di connessione delle informazioni\nAggiornamento generale e ottimizzazioni",
+        "es": "agregar estado de conexión de información\nActualización general y optimizaciones",
+        "pl": "dodaj informacje-stan połączenia\nOgólna aktualizacja i optymalizacje",
+        "zh-cn": "添加信息连接状态\n一般更新和优化"
+      },
+      "0.1.2": {
+        "en": "show connection state",
+        "de": "Verbindungsstatus anzeigen",
+        "ru": "показать состояние подключения",
+        "pt": "mostrar estado de conexão",
+        "nl": "verbindingsstatus weergeven",
+        "fr": "afficher l'état de la connexion",
+        "it": "mostra lo stato della connessione",
+        "es": "mostrar el estado de conexión",
+        "pl": "pokaż stan połączenia",
+        "zh-cn": "显示连接状态"
+      }
+    },
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
+    "type": "utility",
+    "stopBeforeUpdate": true,
+    "localLink": "%protocol%://%ip%:%port%",
+    "adminTab": {
+      "link": "%protocol%://%ip%:%port%",
+      "fa-icon": "subtitles"
+    },
+    "authors": [
+      {
+        "name": "bluefox",
+        "email": "bluefox@ccu.io"
+      }
+    ],
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
+    ],
+    "plugins": {
+      "sentry": {
+        "dsn": "https://fcf06beb38e74b1892ea866f4a1e1d5d@sentry.iobroker.net/180"
+      }
+    }
+  },
+  "native": {
+    "port": 8088,
+    "auth": false,
+    "secure": false,
+    "bind": "0.0.0.0",
+    "defaultUser": "admin",
+    "style": ""
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Number or connected clients",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
