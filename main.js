@@ -287,7 +287,12 @@ function initWebServer(settings) {
                 adapter.log.error('port ' + settings.port + ' already in use');
                 process.exit(1);
             }
-            server.server.listen(port);
+            try {
+                server.server.listen(port);
+            } catch (err) {
+                adapter.log.error(`Could not start server: ${err.message}`);
+                process.exit(1);
+            }
             adapter.log.info('http' + (settings.secure ? 's' : '') + ' server listening on port ' + port);
         });
 
@@ -307,7 +312,11 @@ function initWebServer(settings) {
             cwd: path.normalize(__dirname + '/../..')
         };
 
-        terminal(server.server, config);
+        try {
+            terminal(server.server, config);
+        } catch (err) {
+            adapter.log.error(`Could not attach terminal to server: ${err.message}`);
+        }
     }
 
     if (server.server) {

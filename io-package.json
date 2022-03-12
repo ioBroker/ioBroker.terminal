@@ -2,11 +2,30 @@
     "common": {
         "name": "terminal",
         "version": "0.1.2",
-        "title": "ioBroker simple terminal Adapter",
+        "title": "ioBroker simple terminal",
+        "titleLang": {
+            "en": "ioBroker simple terminal",
+            "de": "ioBroker einfaches Terminal",
+            "ru": "простой терминал ioBroker",
+            "pt": "terminal simples ioBroker",
+            "nl": "ioBroker eenvoudige terminal",
+            "fr": "Terminal simple ioBroker",
+            "it": "terminale semplice ioBroker",
+            "es": "Terminal simple de ioBroker",
+            "pl": "Prosty terminal ioBroker",
+            "zh-cn": "ioBroker 简单终端"
+        },
         "desc": {
             "en": "opens a terminal server for the ioBroker",
-            "de": "Stellt terminal server für 'ioBroker' zur Verfügung",
-            "ru": "Запускает терминал для 'ioBroker'"
+            "de": "öffnet einen Terminalserver für den ioBroker",
+            "ru": "открывает терминальный сервер для ioBroker",
+            "pt": "abre um servidor de terminal para o ioBroker",
+            "nl": "opent een terminalserver voor de ioBroker",
+            "fr": "ouvre un serveur de terminaux pour l'ioBroker",
+            "it": "apre un server terminal per ioBroker",
+            "es": "abre un servidor de terminal para el ioBroker",
+            "pl": "otwiera serwer terminali dla ioBroker",
+            "zh-cn": "为 ioBroker 打开终端服务器"
         },
         "mode": "daemon",
         "license": "MIT",
@@ -21,6 +40,9 @@
             "www",
             "express"
         ],
+        "news": {
+
+        },
         "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
         "type": "utility",
         "stopBeforeUpdate": true,
@@ -34,7 +56,17 @@
                 "name": "bluefox",
                 "email": "bluefox@ccu.io"
             }
-        ]
+        ],
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ],
+        "plugins": {
+            "sentry": {
+                "dsn": "https://3d1d14076f5f473c8bc469c74417d141@sentry.iobroker.net/146"
+            }
+        }
     },
     "native": {
         "port": 8088,
