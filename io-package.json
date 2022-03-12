@@ -41,7 +41,18 @@
             "express"
         ],
         "news": {
-
+            "0.1.2": {
+                "en": "show connection state",
+                "de": "Verbindungsstatus anzeigen",
+                "ru": "показать состояние подключения",
+                "pt": "mostrar estado de conexão",
+                "nl": "verbindingsstatus weergeven",
+                "fr": "afficher l'état de la connexion",
+                "it": "mostra lo stato della connessione",
+                "es": "mostrar el estado de conexión",
+                "pl": "pokaż stan połączenia",
+                "zh-cn": "显示连接状态"
+            }
         },
         "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
         "type": "utility",
