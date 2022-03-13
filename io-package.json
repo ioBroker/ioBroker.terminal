@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.1": {
+        "en": "Fix pot crash cases reported by Sentry (IOBROKER-TERMINAL-1)",
+        "de": "Von Sentry gemeldete Pot-Crash-Fälle behoben (IOBROKER-TERMINAL-1)",
+        "ru": "Исправить случаи сбоя банка, о которых сообщил Sentry (IOBROKER-TERMINAL-1)",
+        "pt": "Corrigir casos de travamento de pote relatados pelo Sentinela (IOBROKER-TERMINAL-1)",
+        "nl": "Herstel gevallen van potcrash gerapporteerd door Sentry (IOBROKER-TERMINAL-1)",
+        "fr": "Correction des cas de crash de pot signalés par Sentry (IOBROKER-TERMINAL-1)",
+        "it": "Risolti i casi di crash del piatto segnalati da Sentry (IOBROKER-TERMINAL-1)",
+        "es": "Solucionar casos de bloqueo de olla informados por Sentry (IOBROKER-TERMINAL-1)",
+        "pl": "Napraw przypadki awarii gry zgłoszone przez Sentry (IOBROKER-TERMINAL-1)",
+        "zh-cn": "修复 Sentry 报告的锅崩溃案例 (IOBROKER-TERMINAL-1)"
+      },
       "0.2.0": {
         "en": "add info-connection state\nGeneral update and optimizations",
         "de": "Info-Verbindungsstatus hinzufügen\nAllgemeines Update und Optimierungen",
