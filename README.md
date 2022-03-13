@@ -20,6 +20,10 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
+
+### __WORK IN PROGRESS__
+* (Apollon77) Fix pot crash cases reported by Sentry (IOBROKER-TERMINAL-1)
+
 ### 0.2.0 (2022-03-12)
 * (Apollon77) add info-connection state
 * (Apollon77) General update and optimizations
