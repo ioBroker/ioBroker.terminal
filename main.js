@@ -121,6 +121,7 @@ function initWebServer(settings) {
     adapter.config.defaultUser = adapter.config.defaultUser || 'admin';
 
     if (settings.port) {
+        settings.port = parseInt(settings.port, 10);
         if (settings.secure) {
             if (!adapter.config.certificates) {
                 return null;
