@@ -20,8 +20,7 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 0.2.2 (2022-04-07)
 * (Apollon77) Fix initialization of ports
 
 ### 0.2.1 (2022-03-13)

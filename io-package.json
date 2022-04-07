@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.2": {
+        "en": "Fix initialization of ports",
+        "de": "Korrigieren Sie die Initialisierung von Ports",
+        "ru": "Исправить инициализацию портов",
+        "pt": "Corrigir inicialização de portas",
+        "nl": "Initialisatie van poorten repareren",
+        "fr": "Correction de l'initialisation des ports",
+        "it": "Correzione dell'inizializzazione delle porte",
+        "es": "Arreglar la inicialización de los puertos.",
+        "pl": "Napraw inicjalizację portów",
+        "zh-cn": "修复端口的初始化"
+      },
       "0.2.1": {
         "en": "Fix pot crash cases reported by Sentry (IOBROKER-TERMINAL-1)",
         "de": "Von Sentry gemeldete Pot-Crash-Fälle behoben (IOBROKER-TERMINAL-1)",
