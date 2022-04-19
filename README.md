@@ -20,6 +20,10 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
+
+### __WORK IN PROGRESS__
+* (Apollon77) Prevent crash when initializing web server with invalid configuration
+
 ### 0.2.2 (2022-04-07)
 * (Apollon77) Fix initialization of ports
 

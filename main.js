@@ -266,10 +266,15 @@ function initWebServer(settings) {
             }
         });
 
-        if (settings.secure) {
-            server.server = require('https').createServer(adapter.config.certificates, server.app);
-        } else {
-            server.server = require('http').createServer(server.app);
+        try {
+            if (settings.secure) {
+                server.server = require('https').createServer(adapter.config.certificates, server.app);
+            } else {
+                server.server = require('http').createServer(server.app);
+            }
+        } catch (err) {
+            adapter.log.error('Cannot create web server. Please check configuration: ' + err);
+            return;
         }
         server.server.__server = server;
     } else {
