@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.3": {
+        "en": "Prevent crash when initializing web server with invalid configuration",
+        "de": "Absturz beim Initialisieren des Webservers mit ungültiger Konfiguration verhindern",
+        "ru": "Предотвращение сбоя при инициализации веб-сервера с неверной конфигурацией",
+        "pt": "Evite travamentos ao inicializar o servidor web com configuração inválida",
+        "nl": "Voorkom crash bij initialisatie van webserver met ongeldige configuratie",
+        "fr": "Empêcher le plantage lors de l'initialisation du serveur Web avec une configuration invalide",
+        "it": "Impedire l'arresto anomalo durante l'inizializzazione del server Web con una configurazione non valida",
+        "es": "Evite el bloqueo al inicializar el servidor web con una configuración no válida",
+        "pl": "Zapobiegaj awariom podczas inicjowania serwera internetowego z nieprawidłową konfiguracją",
+        "zh-cn": "使用无效配置初始化 Web 服务器时防止崩溃"
+      },
       "0.2.2": {
         "en": "Fix initialization of ports",
         "de": "Korrigieren Sie die Initialisierung von Ports",

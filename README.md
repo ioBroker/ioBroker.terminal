@@ -20,8 +20,7 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 0.2.3 (2022-04-19)
 * (Apollon77) Prevent crash when initializing web server with invalid configuration
 
 ### 0.2.2 (2022-04-07)
