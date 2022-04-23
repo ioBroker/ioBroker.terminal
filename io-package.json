@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.4": {
+        "en": "Fix pot crash cases reported by Sentry",
+        "de": "Von Sentry gemeldete Pot-Crash-Fälle behoben",
+        "ru": "Исправить случаи сбоя марихуаны, о которых сообщил Sentry",
+        "pt": "Corrigir casos de travamento de pote relatados pelo Sentinela",
+        "nl": "Herstel gevallen van pot-crash gerapporteerd door Sentry",
+        "fr": "Correction des cas de crash de pot signalés par Sentry",
+        "it": "Risolti i casi di crash del piatto segnalati da Sentry",
+        "es": "Solucionar casos de bloqueo de ollas informados por Sentry",
+        "pl": "Napraw przypadki katastrofy pot zgłoszone przez Sentry",
+        "zh-cn": "修复哨兵报告的锅崩溃案例"
+      },
       "0.2.3": {
         "en": "Prevent crash when initializing web server with invalid configuration",
         "de": "Absturz beim Initialisieren des Webservers mit ungültiger Konfiguration verhindern",

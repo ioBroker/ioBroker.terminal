@@ -1,6 +1,6 @@
 {
   "name": "iobroker.terminal",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "ioBroker simple terminal Adapter",
   "author": {
     "name": "bluefox",

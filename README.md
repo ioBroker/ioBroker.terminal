@@ -20,7 +20,7 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
-### __WORK IN PROGRESS__
+### 0.2.4 (2022-04-23)
 * (Apollon77) Fix pot crash cases reported by Sentry
 
 ### 0.2.3 (2022-04-19)
