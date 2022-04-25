@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.5": {
+        "en": "Optimize process kill behaviour when using CTRL-C",
+        "de": "Optimieren Sie das Abbruchverhalten von Prozessen bei Verwendung von STRG-C",
+        "ru": "Оптимизировано поведение процесса уничтожения при использовании CTRL-C.",
+        "pt": "Otimize o comportamento de interrupção do processo ao usar CTRL-C",
+        "nl": "Optimaliseer het kill-gedrag van processen bij gebruik van CTRL-C",
+        "fr": "Optimiser le comportement de destruction de processus lors de l'utilisation de CTRL-C",
+        "it": "Ottimizza il comportamento di eliminazione del processo quando usi CTRL-C",
+        "es": "Optimice el comportamiento de finalización del proceso al usar CTRL-C",
+        "pl": "Zoptymalizuj zachowanie procesu zabijania podczas używania CTRL-C",
+        "zh-cn": "使用 CTRL-C 时优化进程终止行为"
+      },
       "0.2.4": {
         "en": "Fix pot crash cases reported by Sentry",
         "de": "Von Sentry gemeldete Pot-Crash-Fälle behoben",

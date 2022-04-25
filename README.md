@@ -20,8 +20,7 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 0.2.5 (2022-04-25)
 * (Apollon77/GottZ) Optimize process kill behaviour when using CTRL-C
 
 ### 0.2.4 (2022-04-23)
