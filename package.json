@@ -25,10 +25,10 @@
     "url": "https://github.com/ioBroker/ioBroker.terminal"
   },
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.18.1",
     "cookie-parser": "^1.4.6",
-    "body-parser": "^1.19.2",
-    "express-session": "^1.17.2",
+    "body-parser": "^1.20.0",
+    "express-session": "^1.17.3",
     "passport-local": "^1.0.0",
     "passport": "^0.5.2",
     "request": "^2.88.2",
@@ -36,8 +36,8 @@
     "xtend": "^4.0.2",
     "send": "^0.18.0",
     "connect": "^3.7.0",
-    "socket.io": "^4.4.1",
-    "commander": "^9.1.0",
+    "socket.io": "^4.5.0",
+    "commander": "^9.2.0",
     "lodash": "^4.17.21",
     "nan": "^2.15.0",
     "authenticate-pam": "^1.0.5",
@@ -46,13 +46,13 @@
     "pidtree": "^0.5.0"
   },
   "devDependencies": {
-    "@alcalzone/release-script": "^3.5.8",
-    "@alcalzone/release-script-plugin-iobroker": "^3.5.8",
-    "@alcalzone/release-script-plugin-license": "^3.5.8",
+    "@alcalzone/release-script": "^3.5.9",
+    "@alcalzone/release-script-plugin-iobroker": "^3.5.9",
+    "@alcalzone/release-script-plugin-license": "^3.5.9",
     "nodeunit": "^0.11.3",
     "mocha": "^9.2.2",
     "chai": "^4.3.6",
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "gulp": "^4.0.2"
   },
   "optionalDependencies": {
