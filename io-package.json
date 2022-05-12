@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "0.2.6": {
+        "en": "Fix crash cases as reported by Sentry",
+        "de": "Behebung von Absturzfällen, die von Sentry gemeldet wurden",
+        "ru": "Исправить случаи сбоев, как сообщает Sentry",
+        "pt": "Corrigir casos de travamento conforme relatado pelo Sentinela",
+        "nl": "Herstel crashgevallen zoals gerapporteerd door Sentry",
+        "fr": "Correction des cas de plantage signalés par Sentry",
+        "it": "Risolvi i casi di crash come segnalato da Sentry",
+        "es": "Solucionar casos de fallas según lo informado por Sentry",
+        "pl": "Napraw przypadki awarii zgłaszane przez Sentry",
+        "zh-cn": "修复 Sentry 报告的崩溃案例"
+      },
       "0.2.5": {
         "en": "Optimize process kill behaviour when using CTRL-C",
         "de": "Optimieren Sie das Abbruchverhalten von Prozessen bei Verwendung von STRG-C",
@@ -112,18 +124,6 @@
         "es": "agregar estado de conexión de información\nActualización general y optimizaciones",
         "pl": "dodaj informacje-stan połączenia\nOgólna aktualizacja i optymalizacje",
         "zh-cn": "添加信息连接状态\n一般更新和优化"
-      },
-      "0.1.2": {
-        "en": "show connection state",
-        "de": "Verbindungsstatus anzeigen",
-        "ru": "показать состояние подключения",
-        "pt": "mostrar estado de conexão",
-        "nl": "verbindingsstatus weergeven",
-        "fr": "afficher l'état de la connexion",
-        "it": "mostra lo stato della connessione",
-        "es": "mostrar el estado de conexión",
-        "pl": "pokaż stan połączenia",
-        "zh-cn": "显示连接状态"
       }
     },
     "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
