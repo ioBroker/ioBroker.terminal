@@ -20,6 +20,10 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
+
+### __WORK IN PROGRESS__
+* (Apollon77) Fix crash cases as reported by Sentry 
+
 ### 0.2.5 (2022-04-25)
 * (Apollon77/GottZ) Optimize process kill behaviour when using CTRL-C
 
