@@ -43,7 +43,7 @@
     "authenticate-pam": "^1.0.5",
     "uid-number": "^0.0.6",
     "@iobroker/adapter-core": "^2.6.0",
-    "pidtree": "^0.5.0"
+    "pidtree": "^0.6.0"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^3.5.9",
