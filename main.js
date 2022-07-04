@@ -195,8 +195,8 @@ function initWebServer(settings) {
             });
 
             server.app.get('/logout', function (req, res) {
-                req.logout();
-                res.redirect('/login/index.html');
+                req.logout(() =>
+                    res.redirect('/login/index.html'));
             });
 
             // route middleware to make sure a user is logged in
