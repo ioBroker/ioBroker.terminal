@@ -39,7 +39,7 @@
     "socket.io": "^4.5.1",
     "commander": "^9.2.0",
     "lodash": "^4.17.21",
-    "nan": "^2.15.0",
+    "nan": "^2.16.0",
     "authenticate-pam": "^1.0.5",
     "uid-number": "^0.0.6",
     "@iobroker/adapter-core": "^2.6.0",
