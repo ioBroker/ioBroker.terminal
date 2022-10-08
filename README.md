@@ -20,6 +20,11 @@ Please use it only for administration purposes.
 ![Screenshot](img/screen1.png)
 
 ## Changelog
+
+### __WORK IN PROGRESS__
+* (Apollon77) Also use host when searching for a free port
+* (Apollon77) Prepare for future js-controller versions
+
 ### 0.2.6 (2022-05-12)
 * (Apollon77) Fix crash cases as reported by Sentry
 

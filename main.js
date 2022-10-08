@@ -132,9 +132,9 @@ function initWebServer(settings) {
             session =          require('express-session');
             cookieParser =     require('cookie-parser');
             bodyParser =       require('body-parser');
-            AdapterStore =     require(utils.controllerDir + '/lib/session.js')(session);
+            AdapterStore =     utils.commonTools.session(session);
             passportSocketIo = require(__dirname + '/lib/passport.socketio.js');
-            password =         require(utils.controllerDir + '/lib/password.js');
+            password =         utils.commonTools.password;
             passport =         require('passport');
             LocalStrategy =    require('passport-local').Strategy;
             flash =            require('connect-flash'); // TODO report error to user
@@ -283,7 +283,7 @@ function initWebServer(settings) {
     }
 
     if (server.server) {
-        adapter.getPort(settings.port, function (port) {
+        adapter.getPort(settings.port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, port => {
             if (port !== settings.port && !adapter.config.findNextPort) {
                 adapter.log.error(`port ${settings.port} already in use`);
                 return;
