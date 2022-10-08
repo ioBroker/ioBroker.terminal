@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "terminal",
-    "version": "0.2.6",
+    "version": "1.0.0",
     "title": "ioBroker simple terminal",
     "titleLang": {
       "en": "ioBroker simple terminal",
@@ -41,6 +41,18 @@
       "express"
     ],
     "news": {
+      "1.0.0": {
+        "en": "Check only port of the interface and not of all interfaces\nFix some crash cases reported by Sentry\nPrepare for future js-controller versions",
+        "de": "Überprüfen Sie nur den Port der Schnittstelle und nicht alle Schnittstellen\nBeheben Sie einige Crashfälle gemeldet von Sentry\nBereiten Sie sich auf zukünftige js-Controller-Versionen",
+        "ru": "Проверьте только порт интерфейса и не все интерфейсы\nИсправить некоторые случаи аварии, описанные Сентри\nПодготовьтесь к будущим версиям js-controller",
+        "pt": "Verifique apenas a porta da interface e não de todas as interfaces\nCorrigir alguns casos de acidente relatados por Sentry\nPrepare-se para futuras versões js-controller",
+        "nl": "Controleer alleen de interface en niet van alle interfaces\nRegel een aantal crash gevallen\nBereid je voor op toekomstige Js-controller versie",
+        "fr": "Vérifiez uniquement le port de l'interface et pas de toutes les interfaces\nCorrection de certains cas de crash signalés par Sentry\nPréparez-vous pour les versions futures de js-controller",
+        "it": "Controllare solo la porta dell'interfaccia e non di tutte le interfacce\nFissa alcuni casi di crash segnalati da Sentry\nPrepararsi per le future versioni js-controller",
+        "es": "Compruebe sólo el puerto de la interfaz y no de todas las interfaces\nArreglar algunos casos de accidentes reportados por Sentry\nPrepararse para futuras versiones js-controller",
+        "pl": "Check jedynie port interfejsu i nie wszystkie interfejsy\nFix niektóre przypadki katastrofy odnotowane przez Sentry'a\nPrepare for future js-controller version",
+        "zh-cn": "检查站只是接口的港口,而不是所有接口\n九例Sentry报告的一些事故\n今后防污版本的编制"
+      },
       "0.2.6": {
         "en": "Fix crash cases as reported by Sentry",
         "de": "Behebung von Absturzfällen, die von Sentry gemeldet wurden",
@@ -112,18 +124,6 @@
         "es": "Solucionar casos de bloqueo de olla informados por Sentry (IOBROKER-TERMINAL-1)",
         "pl": "Napraw przypadki awarii gry zgłoszone przez Sentry (IOBROKER-TERMINAL-1)",
         "zh-cn": "修复 Sentry 报告的锅崩溃案例 (IOBROKER-TERMINAL-1)"
-      },
-      "0.2.0": {
-        "en": "add info-connection state\nGeneral update and optimizations",
-        "de": "Info-Verbindungsstatus hinzufügen\nAllgemeines Update und Optimierungen",
-        "ru": "добавить информацию о состоянии соединения\nОбщее обновление и оптимизация",
-        "pt": "adicionar estado de conexão de informações\nAtualização geral e otimizações",
-        "nl": "info-verbindingsstatus toevoegen\nAlgemene update en optimalisaties",
-        "fr": "ajouter l'état de connexion d'informations\nMise à jour générale et optimisations",
-        "it": "aggiungi lo stato di connessione delle informazioni\nAggiornamento generale e ottimizzazioni",
-        "es": "agregar estado de conexión de información\nActualización general y optimizaciones",
-        "pl": "dodaj informacje-stan połączenia\nOgólna aktualizacja i optymalizacje",
-        "zh-cn": "添加信息连接状态\n一般更新和优化"
       }
     },
     "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
