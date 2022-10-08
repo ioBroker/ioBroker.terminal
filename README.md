@@ -22,7 +22,7 @@ Please use it only for administration purposes.
 ## Changelog
 
 ### __WORK IN PROGRESS__
-* (Apollon77) Also use host when searching for a free port
+* (bluefox) Check only port of the interface and not of all interfaces
 * (Apollon77) Fix some crash cases reported by Sentry
 * (Apollon77) Prepare for future js-controller versions
 
