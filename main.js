@@ -283,44 +283,48 @@ function initWebServer(settings) {
     }
 
     if (server.server) {
-        adapter.getPort(settings.port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, port => {
-            if (port !== settings.port && !adapter.config.findNextPort) {
-                adapter.log.error(`port ${settings.port} already in use`);
-                return;
-            }
-            try {
-                server.server.listen(port);
-            } catch (err) {
-                adapter.log.error(`Could not start server: ${err.message}`);
-                return;
-            }
-            adapter.setState('info.connection', true, true);
-            adapter.log.info(`http${settings.secure ? 's' : ''} server listening on port ${port}`);
-
-            /*server.app.use(function (req, res, next) {
-                res.header('Access-Control-Allow-Origin', '*');
-                res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-                res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, *');
-
-                // intercept OPTIONS method
-                if ('OPTIONS' == req.method) {
-                    res.send(200);
-                } else {
-                    next();
+        try {
+            adapter.getPort(settings.port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, port => {
+                if (port !== settings.port && !adapter.config.findNextPort) {
+                    adapter.log.error(`port ${settings.port} already in use`);
+                    return;
                 }
-            });*/
-            var config = {
-                cwd: path.normalize(__dirname + '/../..')
-            };
+                try {
+                    server.server.listen(port);
+                } catch (err) {
+                    adapter.log.error(`Could not start server: ${err.message}`);
+                    return;
+                }
+                adapter.setState('info.connection', true, true);
+                adapter.log.info(`http${settings.secure ? 's' : ''} server listening on port ${port}`);
 
-            try {
-                terminal(server.server, config);
-            } catch (err) {
-                adapter.log.error(`Could not attach terminal to server: ${err.message}`);
-                adapter.setState('info.connection', false, true);
-            }
-        });
+                /*server.app.use(function (req, res, next) {
+                    res.header('Access-Control-Allow-Origin', '*');
+                    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+                    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, *');
 
+                    // intercept OPTIONS method
+                    if ('OPTIONS' == req.method) {
+                        res.send(200);
+                    } else {
+                        next();
+                    }
+                });*/
+                var config = {
+                    cwd: path.normalize(__dirname + '/../..')
+                };
+
+                try {
+                    terminal(server.server, config);
+                } catch (err) {
+                    adapter.log.error(`Could not attach terminal to server: ${err.message}`);
+                    adapter.setState('info.connection', false, true);
+                }
+            });
+        } catch (err) {
+            adapter.log.error(`Cannot start in ${settings.bind} on port ${settings.port}: ${err}`);
+            return;
+        }
     }
 
     if (server.server) {
