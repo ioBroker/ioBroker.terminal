@@ -28,7 +28,10 @@
       "zh-cn": "为 ioBroker 打开终端服务器"
     },
     "mode": "daemon",
-    "license": "MIT",
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
     "platform": "Javascript/Node.js",
     "loglevel": "info",
     "icon": "terminal.png",
