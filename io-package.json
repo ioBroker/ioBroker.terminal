@@ -135,8 +135,7 @@
     "stopBeforeUpdate": true,
     "localLink": "%protocol%://%ip%:%port%",
     "adminTab": {
-      "link": "%protocol%://%ip%:%port%",
-      "fa-icon": "subtitles"
+      "link": "%protocol%://%ip%:%port%"
     },
     "authors": [
       {
