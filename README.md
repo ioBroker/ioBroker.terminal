@@ -59,6 +59,8 @@ Please use it only for administration purposes.
 ### 0.0.1
 * (bluefox) initial commit
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 The MIT License (MIT)
 
