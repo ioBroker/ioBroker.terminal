@@ -3,10 +3,10 @@
 "use strict";
 
 const express = require('express');
-const fs = require('fs');
+const fs = require('node:fs');
 const utils = require('@iobroker/adapter-core'); // Get common adapter utils
 const terminal = require(__dirname + '/lib/web-terminal');
-const path = require('path');
+const path = require('node:path');
 
 let session;// =           require('express-session');
 let cookieParser;// =      require('cookie-parser');
@@ -42,7 +42,7 @@ const adapter = utils.Adapter({
         adapter.getForeignObject('system.adapter.terminal', function (err, obj) {
             if (!err && obj) {
                 if (!obj.native.secret) {
-                    require('crypto').randomBytes(24, function (ex, buf) {
+                    require('node:crypto').randomBytes(24, function (ex, buf) {
                         secret = buf.toString('hex');
                         adapter.extendForeignObject('system.adapter.terminal', {native: {secret: secret}});
                         main();
@@ -268,9 +268,9 @@ function initWebServer(settings) {
 
         try {
             if (settings.secure) {
-                server.server = require('https').createServer(adapter.config.certificates, server.app);
+                server.server = require('node:https').createServer(adapter.config.certificates, server.app);
             } else {
-                server.server = require('http').createServer(server.app);
+                server.server = require('node:http').createServer(server.app);
             }
         } catch (err) {
             adapter.log.error('Cannot create web server. Please check configuration: ' + err);
