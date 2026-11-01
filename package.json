@@ -7,7 +7,7 @@
     "email": "bluefox@ccu.io"
   },
   "engines": {
-    "node": ">=22.10"
+    "node": ">=22.19.0"
   },
   "homepage": "https://github.com/ioBroker/ioBroker.terminal",
   "licenses": [
