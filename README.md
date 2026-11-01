@@ -22,6 +22,7 @@ Please use it only for administration purposes.
 ## Changelog
 
 ### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22.19.0 now
 - (iobroker-bot) Adapter requires node.js >= 22 now.
 ### 1.0.0 (2022-10-08)
 * (bluefox) Check only port of the interface and not of all interfaces
